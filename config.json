@@ -1,0 +1,20 @@
+{
+    "app_exe": "notepad.exe",
+    "backend": "uia",
+    "window_title_re": ".*(Bloc de notas|Notepad).*",
+    "menus": {
+        "main": {
+            "edit": {
+                "auto_id": "Edit",
+                "control_type": "MenuItem"
+            }
+        },
+        "sub": {
+            "fecha_hora": {
+                "title": "Fecha y hora",
+                "control_type": "MenuItem"
+            }
+        }
+    },
+    "text_to_write": "¡Hola! Soy Luis"
+}
