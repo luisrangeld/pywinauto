@@ -1,7 +1,7 @@
 # Pywinauto Automation – Notepad UWP Example
 
 This project demonstrates how to use [Pywinauto](https://pywinauto.readthedocs.io/en/latest/) to automate Windows applications.  
-The example provided here automates the **Windows 10/11 Notepad (UWP)** app, but the same approach can be adapted for WPF and Win32 apps.
+One of the examples provided here automates the **Windows 10/11 Notepad (UWP)** app, but the same approach can be adapted for WPF and Win32 apps.
 
 ## 📋 Features
 - Launch Notepad (UWP)
@@ -48,3 +48,4 @@ You can edit `config.json` to automate a different app.
 Run the main automation script:
 ```powershell
 python test01.py
+
