@@ -1,3 +1,5 @@
+#for calculatori do not need to add the path because Calculator is already in Pywinauto for testing purposes 
+
 from subprocess import Popen
 from pywinauto import Desktop
 from time import sleep
@@ -13,4 +15,5 @@ sleep(1)
 dialog.Siete.click()
 sleep(1)
 # puedo tambien usar dialog.Es_igual_a.click()
+
 dialog.child_window(title="Es igual a", auto_id="equalButton", control_type="Button").click()
