@@ -1,8 +1,12 @@
-from pywinauto.application import Application
-from pywinauto.timings import time
+# import dependencies from pywwinauto libraries
 
+from pywinauto.application import Application
+import time
+
+#start Zoom app
 zoom_app = Application(backend="uia").start(r"ruta de Zoom.exe") #insertar acá la ruta de tu aplicación
 
+# Find the Zoom window and declare it as "Dialog"
 dlg = zoom_app.window(title_re='.*Zoom.*')
 dlg.wait("visible", timeout=20)
 
@@ -22,6 +26,8 @@ pwd_box.type_keys("password") #insertar acá la contraseña de tu cuenta de Zoo
 
 sign_in_button = zoom_app.ZoomWorkplace.child_window(title="Iniciar sesión", control_type="Button")
 sign_in_button.click_input()
+
+# Here we handle the OTP
 
 digit1 = zoom_app.ZoomWorkplace.child_window(title="Introducir el dígito 1 del código de verificación En blanco", control_type="Edit")
 digit1.wait("visible",timeout=10)
@@ -60,4 +66,5 @@ assert error_msg.exists(), "No apareció el mensaje de error esperado"
 
 
 time.sleep(3)
+
 identifier = zoom_app.ZoomWorkplace.print_control_identifiers()
