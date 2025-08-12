@@ -1,3 +1,5 @@
+# In this example we will be connecting to an already running app
+
 import pywinauto
 import pyperclip
 from pywinauto.application import Application
@@ -19,5 +21,6 @@ time.sleep(1)
 msg_box.type_keys("^v")
 msg_box.type_keys("{ENTER}")
 time.sleep(5)
+
 
 
